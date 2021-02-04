@@ -36,6 +36,7 @@ namespace backend.Controllers
         public ActionResult<List<Models.Response.ListaNegraResponse>> Listar(){
             try
             {
+            System.Threading.Thread.Sleep(3000);
              List<Models.TbBlacklist> lns = Business.Listar(); 
              if(lns.Count == 0)
                 return NotFound();
